@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Listas dos Municípios
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-icon [name]="item.icon" slot="start"></ion-icon>
+      {{item.title}}
+      <div class="item-note" slot="end">
+        {{item.note}}
+      </div>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      Municípios
+    </ion-list-header>
+    <ion-item routerLink="/lobito" detail>Lobito</ion-item>
+    <ion-item routerLink="/catumbela" detail>Catumbela</ion-item>
+    <ion-item routerLink="/baiafarta" detail> Baia-Farta</ion-item>
+  </ion-list>
+
+
+
+ 
+
+
